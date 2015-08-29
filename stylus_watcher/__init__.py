@@ -32,7 +32,7 @@ class Watcher(object):
     handler = None
     command = None
     blocked = False
-    stout_prefix = 'cargo-stylus'
+    stout_prefix = 'stylus'
     configs = []
 
     def __init__(self, command=None, *args, **kwargs):
@@ -89,17 +89,6 @@ class Watcher(object):
         else:
             configs = settings.STYLUS_WATCHER
 
-            # try:
-            #     from cargo import admin
-            #     configs.append(
-            #         (
-            #             os.path.join(os.path.dirname(admin.__file__), 'styl/admin.styl'),
-            #             os.path.join(os.path.dirname(admin.__file__), 'static/cargo/admin/css/cargo.css'),
-            #         )
-            #     )
-            # except:
-            #     pass
-
             for config in configs:
                 try:
 
@@ -131,7 +120,7 @@ class Watcher(object):
                         self.configs.append([source, css_output, content])
                 except Exception, e:
                     # print config
-                    self.print_error(u'Invalid config for cargo stylus watchers "%s"' % (e.message))
+                    self.print_error(u'Invalid config for stylus watcher "%s"' % (e.message))
 
 
 
@@ -257,7 +246,6 @@ import_app(appname, path)
         return app_paths
 
     def sigterm(self, signum, frame):
-        print 'Cargo watchers : SIGTERM'
         self.observer.stop()
         self.observer.join()
         exit(0)
