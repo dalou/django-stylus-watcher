@@ -12,7 +12,7 @@ f.close()
 
 setup(
     name='django-stylus-watcher',
-    version="1.0",
+    version="1.0.2",
     description='Django stylus watchers & auto compilers',
     long_description=readme,
     author='Autrusseau Damien',

@@ -1,25 +1,22 @@
 language: python
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install nodejs npm
-  - npm install stylus -g
+- sudo apt-get update
+- sudo apt-get install nodejs npm
+- npm install stylus -g
 install:
-  - pip install stylus
-  - pip install -q -e .
-
+- pip install stylus
+- pip install -q -e .
 python:
-  - '2.7'
-
+- '2.7'
 script:
-  - python runtests.py
-  #nosetests
-
+- python runtests.py
 deploy:
   provider: pypi
   user: dalou
   password:
     secure: iO8xcY0LTFOtPOHt7McujR0GQzTjfaGrxa2EeV9v1BmvfAm0DNfW6Itbu59pnVbVhPfPUnPKycMn6pNBiUL0pm3Ergfaz4zIMFHLgGMQ1BiIdZUOCFtI/gF12nA9viM/lQEfxWj72RKTUBodB/QtGjMFnhMbC2Vs4Ji7W0HNyZslDeQ/PuhGfoSIIRxzDSNrK+07pLB0zmC2yS/GLyxPLlF6ifflHhSexpuyPITFNW9DZV8BML+aviuqSaAKQe1dURXQSy8KEnQr96gGuPHYyxxS1Y8JZ/+cDwfNAg2b6DD8oY58wzN6ZeynjYP4PwP9j6La/AeWSzSlv8mbkS7yaYYJABUJwTi2Ay/OvKdCgahdytpzB4SSDWKfydOQNRTAdMphSnlT761ZFgHa9HJKt6ayG9bLg6ef6btMWX/1gJn3dO+IpNgnegNOCqqhnsb3ay0CiUEJ4filwgiSW9VQWHgzKixnjzmAdZLlpCQMFPkCWR0J1l5ojgSOK1cYauemT3i9R+eZlEkLNXui1xiFZFL6/y1KTsWyrXs4ybdtOX2lHal5qW+/aRHwgMSMLT8I7rNeBB/+Ca0i5F/IHdB1l/q/QOrIxOkjUr8eMwQ2qwrsGrDAjwF6IEuqd4M3dbmI6CnuktLPx+HOF1HniLwvnm+pJnJeHXeFm/9zzVGuxp4=
-
   on:
     branch: master
     tags: true
+  passwor:
+    secure: gNCULJm2fghr+5mXkCK1hzj3RvYzr/6YVr/MSta71SerYqef+ec7EYpcdHgibE9cBdboeAF5LrHTMyMNR7ZtMxjdmcJ0AYZNwVncSGaDyNCRMep/2R9WeejlI1ya2CKjziYhVLuChUXwPgrQAOfDQS/pLCFDNddXlJeumPojqTaQx/g0ZiYIxEUu5AAhue3nT/9dQvw82KLhp6tntUWDvlvKNtIk4Nhs3EOPDjCotMvLa02MauqiPKG+3SxEWlLdea91TB0kzp02cxb4eDyD58ZDc9w2Cz+EC/ybAUxoGxmujIRLm2LTsNsuIfZBU+Ig1wDt6EppxtQNNXcNewjjBFZISZuhvtRoYjvQChe6gASU/tyIPRWycwV+G7rvMS9amme2W7L40ywzaSWHzpWAXBk2h44lJt4VfJgkggOavhaYB0ULrcUzjzAcS6aW2sMyRRlN9wJCmzfrQx5SrB0TV0eNpAG4MbcZIMiHs4l7d6VSdOagv9YN67+TG0X7R0WZsxOlyPc3Iqzfx05xL2si/jD0+ZzS5KpkAIEi66GPa08utQSRWNPTyOcGL7lcllKuwtLUtQD9ligfNNVhx0SbI0YqJbt8hZEbqJNkK7lWDZ+c/VbQnyeU9BAAky2MmYcgiFCW5sji2u0a5uCpvZc9UxDIZcmq+qi+8irApwcO0Ug=
