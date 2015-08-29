@@ -1,0 +1,12 @@
+language: python
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install stylus
+
+install:
+  - pip install stylus_watcher
+
+python:
+  - "2.7"
+
