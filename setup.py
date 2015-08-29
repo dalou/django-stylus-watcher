@@ -42,7 +42,7 @@ setup(
     name='django-stylus-watcher',
     version="1.0.2",
     description='Django stylus watchers & auto compilers',
-    long_description=readme,
+    long_description=read('README.rst'),
     author='Autrusseau Damien',
     author_email='autrusseau.damien@gmail.com',
     url='http://github.com/dalou/django-stylus-watcher',
