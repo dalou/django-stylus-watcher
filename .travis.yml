@@ -5,6 +5,9 @@ before_install:
     - npm install stylus -g
 install:
     - pip install stylus
+    - pip install -q Django==$DJANGO
+    - pip install -q -e .
+
 python:
     - '2.7'
 
