@@ -6,7 +6,7 @@ from fnmatch import fnmatchcase
 from distutils.util import convert_path
 from setuptools import setup, find_packages
 
-f = open(os.path.join(os.path.dirname(__file__), 'README.txt'))
+f = open(os.path.join(os.path.dirname(__file__), 'README.rst'))
 readme = f.read()
 f.close()
 
@@ -20,6 +20,7 @@ setup(
     url='http://github.com/dalou/django-stylus-watcher/tree/master',
     packages=find_packages(),
     zip_safe=False,
+    license='MIT',
     classifiers=[
         'Development Status :: 1 - Beta',
         'Environment :: Web Environment',
