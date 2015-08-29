@@ -30,7 +30,7 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-    test_suite='runtests.runtests',,
+    test_suite='runtests.runtests',
     install_requires=[
         'watchdog >= 0.8.3',
         'stylus >= 0.1.1',
