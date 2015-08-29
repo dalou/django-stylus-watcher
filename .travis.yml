@@ -4,7 +4,7 @@ before_install:
 - sudo apt-get install nodejs npm
 - npm install stylus -g
 install:
-- pip install stylus_watcher
+- pip install stylus
 python:
 - '2.7'
 deploy:
