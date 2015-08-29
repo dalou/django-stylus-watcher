@@ -40,7 +40,7 @@ standard_exclude_directories = ('.*', 'CVS', '_darcs', './build',
 
 setup(
     name='django-stylus-watcher',
-    version="1.0.2",
+    version=find_version(),
     description='Django stylus watchers & auto compilers',
     long_description=read('README.rst'),
     author='Autrusseau Damien',

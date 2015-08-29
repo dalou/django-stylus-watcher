@@ -137,7 +137,7 @@ class Watcher(object):
             f = open(source, 'r')
             initial = f.read()
             f.close()
-            shortcuts_path = os.path.join(os.path.dirname(__file__), '..', 'stylus', 'shortcuts', 'shortcuts.styl')
+            shortcuts_path = os.path.join(os.path.dirname(__file__), 'shortcuts', 'shortcuts.styl')
 
             styl = """
 SOURCE_ROOT = '%s/'
