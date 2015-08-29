@@ -1,18 +1,18 @@
 language: python
 before_install:
-    - sudo apt-get update
-    - sudo apt-get install nodejs npm
-    - npm install stylus -g
+  - sudo apt-get update
+  - sudo apt-get install nodejs npm
+  - npm install stylus -g
 install:
-    - pip install stylus
-    - pip install -q -e .
+  - pip install stylus
+  - pip install -q -e .
 
 python:
-    - '2.7'
+  - '2.7'
 
 script:
-    - touch notests
-    #nosetests
+  - python runtests.py
+  #nosetests
 
 deploy:
   provider: pypi
